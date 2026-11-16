@@ -12,7 +12,7 @@ const producao = process.argv[2] === "production";
 
 const saida = producao
   ? resolve(aqui, "dist")
-  : resolve(aqui, "../cofre-teste/.obsidian/plugins/accretion-disk-3d");
+  : resolve(aqui, "../cofre-teste/.obsidian/plugins/accretion-disk");
 
 mkdirSync(saida, { recursive: true });
 
