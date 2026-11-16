@@ -2,18 +2,18 @@
    Gerado a partir de prototipo/index.html (regras prefixadas com .olho-raiz). */
 
 /* a vista do Obsidian não tem margem, e o quadro ocupa tudo */
-.olho-universo-view { padding: 0 !important; overflow: hidden; }
+.view-content.accretion-disk-3d-view, .accretion-disk-3d-view { padding: 0; overflow: hidden; }
 
 .olho-raiz {
   position: relative; width: 100%; height: 100%; overflow: hidden; outline: none; user-select: none;
   background: radial-gradient(ellipse at 45% 50%, #0d1826 0%, #070d16 40%, #04070c 75%, #020305 100%);
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-interface, -apple-system, "Segoe UI", Roboto, sans-serif);
 }
 /* o Obsidian estiliza todo <button>: aqui zeramos altura e sombra (as regras de cada botão vêm abaixo) */
 .olho-raiz.olho-raiz button { height: auto; min-height: 0; box-shadow: none; font-family: var(--mono); }
 .olho-raiz.olho-raiz input, .olho-raiz.olho-raiz select, .olho-raiz.olho-raiz textarea { box-shadow: none; height: auto; }
 
-.olho-raiz { --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace; }
+.olho-raiz { --mono: "SF Mono", Menlo, Consolas, monospace; }
 .olho-raiz canvas { display: block; width: 100%; height: 100%; }
 .olho-raiz #skills { position: absolute; inset: 0; pointer-events: none; }
 .olho-raiz .skill {
@@ -71,15 +71,15 @@
 .olho-raiz.foco #cfgbtn,
 .olho-raiz.foco #reset,
 .olho-raiz.foco #skills-titulo,
-.olho-raiz.foco #fps,
-.olho-raiz.foco #cfg,
-.olho-raiz.foco #ed,
-.olho-raiz.foco #skill-card {
-    opacity: 0 !important; pointer-events: none !important;
+.olho-raiz.foco.foco #fps,
+.olho-raiz.foco.foco #cfg,
+.olho-raiz.foco.foco #ed,
+.olho-raiz.foco.foco #skill-card {
+    opacity: 0; pointer-events: none;
   }
 .olho-raiz.foco #focobtn { opacity: 0; }
 .olho-raiz.foco #focobtn:hover { opacity: .85; }
-.olho-raiz.foco .skill:not(.hover) { visibility: hidden !important; }
+.olho-raiz.foco.foco .skill:not(.hover) { visibility: hidden; }
 .olho-raiz #cfg select {
     width: 100%; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(232, 176, 74, .4);
     background: rgba(255, 255, 255, .05); color: #fff3dc; font: 400 11px/1 var(--mono);
@@ -167,13 +167,13 @@
 .olho-raiz #term .tb b { color: #E8B04A; font-weight: 500; }
 .olho-raiz #term .tb i { display: inline-block; width: 6px; height: 11px; margin-left: 2px; vertical-align: -2px; background: #E8B04A; animation: olho-cur 1s steps(1) infinite; }
 @keyframes olho-cur { 50% { opacity: 0; } }
-.olho-raiz.foco #term { display: none !important; }
+.olho-raiz.foco.foco #term { display: none; }
 
 /* Marca no canto: bolinha piscando + nome do cofre */
 .olho-raiz #marca { position: absolute; left: 20px; top: 30px; display: flex; align-items: center; gap: 9px; pointer-events: none; user-select: none; color: #E8B04A; font: 500 10px/1 var(--mono); letter-spacing: .26em; }
 .olho-raiz #marca .dot { width: 7px; height: 7px; border-radius: 50%; background: #E8B04A; box-shadow: 0 0 8px 2px rgba(232,176,74,.55); animation: olho-pisca 2.4s ease-in-out infinite; }
 @keyframes olho-pisca { 0%, 62%, 100% { opacity: 1; transform: scale(1); } 70% { opacity: .15; transform: scale(.6); } 78% { opacity: 1; transform: scale(1); } 86% { opacity: .2; } 92% { opacity: 1; } }
-.olho-raiz.foco #marca { display: none !important; }
+.olho-raiz.foco.foco #marca { display: none; }
 .olho-raiz #skill-card .abrir { margin-top: 16px; padding: 6px 12px; background: transparent; border: 1px solid rgba(232,176,74,.55); border-radius: 14px; color: #E8B04A; font: 500 9.5px/1 var(--mono); letter-spacing: .22em; cursor: pointer; pointer-events: auto; }
 .olho-raiz #skill-card .abrir:hover { background: rgba(232,176,74,.14); }
 
@@ -194,7 +194,7 @@
 .olho-raiz #caminho .seta { color: #E8B04A; }
 .olho-raiz #caminho .chip { background: rgba(232,176,74,.12); border: 1px solid rgba(232,176,74,.55); border-radius: 999px; padding: 5px 11px; color: #fff3dc; font: 500 10px/1 var(--mono); cursor: pointer; }
 .olho-raiz #caminho .x { position: absolute; right: 10px; top: 8px; background: none; border: 0; color: rgba(232,176,74,.8); font-size: 18px; line-height: 1; cursor: pointer; padding: 4px 6px; }
-.olho-raiz.foco #caminho { display: none !important; }
+.olho-raiz.foco.foco #caminho { display: none; }
 .olho-raiz.olho-raiz #caminho .op { text-align: left; justify-content: flex-start; }
 
 /* Zoom pelos anéis */

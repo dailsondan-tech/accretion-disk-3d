@@ -358,7 +358,8 @@ diskGroup.add(innerDisc);
 scene.add(diskGroup);
 
 // ---------- Configurações (salvas no navegador; no plugin vão para o data.json) ----------
-const armazem = opts.armazem || { ler: () => JSON.parse(localStorage.getItem('olho-cfg') || '{}'), salvar: (c) => localStorage.setItem('olho-cfg', JSON.stringify(c)) };
+let cfgMemoria = {};
+const armazem = opts.armazem || { ler: () => cfgMemoria, salvar: (c) => { cfgMemoria = c; } };
 const cfg = Object.assign({ clique: 'clicar', brilho: 1, recentes: true, vizinhanca: false, camada2: 2, letras: 22, qualidade: 'auto', pausar: true, pausaMin: 5, paradasDias: 30, som: false, pulsos: true, meteoro: true },
   armazem.ler());
 const saveCfg = () => armazem.salvar({ ...cfg });
@@ -384,9 +385,10 @@ const TOPICS_PADRAO = [
     'Terminal do Mac', 'Regras de Tráfego Pago', 'Regras de mockup profissional', 'Palavras do cliente'] },
 ];
 // tópicos e nomes podem ser editados no CONFIG (salvos no navegador; no plugin virão do cofre)
+let topicosMemoria = null;
 function carregarTopicos() {
   try {
-    const t = JSON.parse(localStorage.getItem('olho-topicos') || 'null');
+    const t = topicosMemoria;
     if (Array.isArray(t) && t.length && t.every((x) => x && typeof x.nome === 'string' && Array.isArray(x.itens) && x.itens.length)) return t;
   } catch (e) { /* usa o padrão */ }
   return TOPICS_PADRAO.map((t) => ({ nome: t.nome, itens: [...t.itens] }));
@@ -1364,7 +1366,7 @@ $('ed-save').addEventListener('click', () => {
   })).filter((t) => t.itens.length);
   if (!novos.length) return;
   TOPICS = novos;
-  if (!COFRE) localStorage.setItem('olho-topicos', JSON.stringify(novos));
+  if (!COFRE) topicosMemoria = novos;
   edEl.classList.remove('open'); closeCard(); leaving = null; buildTopic(0);
 });
 
