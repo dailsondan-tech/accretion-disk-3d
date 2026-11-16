@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dev/harness.js
+dev/styles.css
+data.json
+.DS_Store
+._*
+.hotreload
