@@ -8,8 +8,6 @@ Your vault as a 3D black hole: a black eye, a disk of golden particles, and a ha
 
 ## Demo
 
-<video src="https://github.com/dailsondan-tech/accretion-disk-3d/raw/main/media/demo.mp4" controls muted width="100%"></video>
-
 [Watch the demo (MP4, 30 s)](media/demo.mp4)
 
 ## Open it
