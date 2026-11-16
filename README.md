@@ -6,6 +6,12 @@ Your vault as a 3D black hole: a black eye, a disk of golden particles, and a ha
 
 > The interface text (buttons and default list names) is currently in Brazilian Portuguese. See the table below for what each label means.
 
+## Demo
+
+<video src="https://github.com/dailsondan-tech/accretion-disk-3d/raw/main/media/demo.mp4" controls muted width="100%"></video>
+
+[Watch the demo (MP4, 30 s)](media/demo.mp4)
+
 ## Open it
 Click the **eye** icon in the ribbon, or run the command **Open Accretion Disk 3D** (Cmd/Ctrl+P).
 

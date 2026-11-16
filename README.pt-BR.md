@@ -4,6 +4,12 @@
 
 Seu cofre como um buraco negro em 3D: um olho preto, um disco de partículas douradas e, em volta, uma meia-lua com os nomes das suas notas, ligadas ao olho por linhas curvas com bolinhas de luz.
 
+## Demonstração
+
+<video src="https://github.com/dailsondan-tech/accretion-disk-3d/raw/main/media/demo.mp4" controls muted width="100%"></video>
+
+[Ver a demonstração (MP4, 30 s)](media/demo.mp4)
+
 ## Abrir
 Ícone de olho na barra lateral, ou o comando **Abrir Accretion Disk 3D** (Cmd+P).
 
