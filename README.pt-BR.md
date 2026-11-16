@@ -6,7 +6,9 @@ Seu cofre como um buraco negro em 3D: um olho preto, um disco de partículas dou
 
 ## Demonstração
 
-[Ver a demonstração (MP4, 30 s)](media/demo.mp4)
+https://github.com/user-attachments/assets/1df0be7b-e47d-481c-a821-ef0c9c94f0da
+
+[Ver a demonstração (MP4)](media/demo.mp4)
 
 ## Abrir
 Ícone de olho na barra lateral, ou o comando **Abrir Accretion Disk 3D** (Cmd+P).

@@ -8,7 +8,9 @@ Your vault as a 3D black hole: a black eye, a disk of golden particles, and a ha
 
 ## Demo
 
-[Watch the demo (MP4, 30 s)](media/demo.mp4)
+https://github.com/user-attachments/assets/1df0be7b-e47d-481c-a821-ef0c9c94f0da
+
+[Watch the demo (MP4)](media/demo.mp4)
 
 ## Open it
 Click the **eye** icon in the ribbon, or run the command **Open Accretion Disk 3D** (Cmd/Ctrl+P).
